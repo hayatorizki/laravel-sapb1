@@ -11,6 +11,7 @@
         "php": "^7.2.5|^8.0",
         "fideloper/proxy": "^4.4",
         "guzzlehttp/guzzle": "^7.4",
+        "kkszymanowski/laravel-6-odbc": "^6.0",
         "laravel/framework": "^6.20.26",
         "laravel/tinker": "^2.5"
     },

@@ -14,6 +14,14 @@
         @endif
       <form action="{{url('login')}}" method="post">
         @csrf()
+        <div class="form-group">
+            <select class="form-control" name="companydb" required>
+              <option>Company</option>
+              @foreach($companydb as $cd)
+              <option value="{{$cd->CompIdent}}">{{$cd->CompIdent}}</li>
+              @endforeach
+            </select>
+          </div>
         <div class="input-group mb-3">
           <input type="text" name="username" class="form-control" placeholder="UserName" required>
           <div class="input-group-append">

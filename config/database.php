@@ -90,6 +90,15 @@ return [
             'prefix' => '',
             'prefix_indexes' => true,
         ],
+        
+        'myOdbcConnection' => [
+            'driver'   => 'odbc',
+            'dsn'      => env('DB_ODBC_CONNECTION_STRING'),
+            'host'     => env('DB_ODBC_HOST'),
+            'database' => env('DB_ODBC_DATABASE'),
+            'username' => env('DB_ODBC_USERNAME'),
+            'password' => env('DB_ODBC_PASSWORD'),
+        ],
 
     ],
 

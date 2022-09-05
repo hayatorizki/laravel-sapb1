@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "edddfe498575bcff27bb34287f1f41cd",
+    "content-hash": "74629b5b28cd64867cbc0b666e7c0d1a",
     "packages": [
         {
             "name": "doctrine/inflector",
@@ -685,6 +685,61 @@
                 }
             ],
             "time": "2022-06-20T21:43:11+00:00"
+        },
+        {
+            "name": "kkszymanowski/laravel-6-odbc",
+            "version": "6.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/KKSzymanowski/laravel-6-odbc.git",
+                "reference": "095f6e9383e831ac2c2f8aaad196c9e2085185a7"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/KKSzymanowski/laravel-6-odbc/zipball/095f6e9383e831ac2c2f8aaad196c9e2085185a7",
+                "reference": "095f6e9383e831ac2c2f8aaad196c9e2085185a7",
+                "shasum": ""
+            },
+            "require": {
+                "ext-pdo": "*",
+                "illuminate/container": "^6.0|^7.0|^8.0",
+                "illuminate/database": "^6.0|^7.0|^8.0",
+                "illuminate/support": "^6.0|^7.0|^8.0",
+                "php": "^7.2|^8.0"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "Odbc\\OdbcServiceProvider"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Odbc\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Kuba Szymanowski",
+                    "email": "kubaszymanowski@gmail.com"
+                },
+                {
+                    "name": "tck",
+                    "email": "ben@thecreativekind.co.uk"
+                }
+            ],
+            "description": "ODBC Connector for Laravel 6",
+            "support": {
+                "issues": "https://github.com/KKSzymanowski/laravel-6-odbc/issues",
+                "source": "https://github.com/KKSzymanowski/laravel-6-odbc/tree/6.0.5"
+            },
+            "time": "2020-12-16T09:36:12+00:00"
         },
         {
             "name": "laravel/framework",

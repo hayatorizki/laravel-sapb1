@@ -7,6 +7,9 @@ use GuzzleHttp\Client;
 use Illuminate\Support\Facades\Cookie;
 use GuzzleHttp\Psr7;
 use GuzzleHttp\Exception;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Database\Query\Builder;
+use Odbc\OdbcQueryGrammar;
 use Session;
 class AuthController extends Controller
 {
@@ -16,7 +19,8 @@ class AuthController extends Controller
         if(!empty(session()->get('cookies'))){
             return redirect('/');
         }else{
-            return view('login');
+            $companydb = DB::connection('myOdbcConnection')->table('SBOCOMMON.SLSP')->get();
+            return view('login', compact('companydb'));
         }
         
     }
@@ -27,7 +31,7 @@ class AuthController extends Controller
         $ep = 'Login';
         // Request
         $obj = [ 'json' => [
-            'CompanyDB' => env('SL_DB'),
+            'CompanyDB' => $request->companydb,
             'Password' => $request->password,
             'UserName' => $request->username
             ]
